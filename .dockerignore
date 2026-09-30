@@ -31,4 +31,5 @@ README.md
 **/local.settings.json
 **/*.postman_collection.json
 **/*postman_environment.json
+CLDV6212_CoffeeNChill_Functions.Tests/
 
