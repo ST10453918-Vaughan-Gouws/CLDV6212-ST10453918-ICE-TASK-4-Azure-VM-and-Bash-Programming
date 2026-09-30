@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "CLDV6212_CoffeeNChill_Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7247"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "containerRunArguments": "--init",
+      "httpPort": 34404,
+      "useSSL": false
+    }
+  }
+}
