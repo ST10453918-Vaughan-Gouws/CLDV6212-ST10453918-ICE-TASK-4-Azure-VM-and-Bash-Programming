@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -12,14 +12,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\NewFolder\**" />
-    <Compile Remove="NewFolder\**" />
-    <EmbeddedResource Remove="Models\NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <None Remove="Models\NewFolder\**" />
-    <None Remove="NewFolder\**" />
+    <Compile Remove="CLDV6212_CoffeeNChill_Functions.Tests/**" />
+    <None Remove="CLDV6212_CoffeeNChill_Functions.Tests/**" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Azure.Core" Version="1.62.0" />

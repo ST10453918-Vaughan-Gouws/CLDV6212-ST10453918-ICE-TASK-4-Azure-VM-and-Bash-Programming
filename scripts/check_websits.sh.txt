@@ -1,0 +1,24 @@
+#!/bin/bash
+# Checks whether each website in the list is reachable
+
+websites=(
+    "https://www.google.com"
+    "https://www.github.com"
+    "https://www.microsoft.com"
+    "https://hub.docker.com"
+    "https://this-site-does-not-exist-12345.com"
+)
+
+for site in "${websites[@]}"
+do
+    # -s = silent, -o /dev/null = throw away the page content,
+    # -L = follow redirects, -w = print only the HTTP status code,
+    # --max-time = give up after 10 seconds
+    status=$(curl -s -o /dev/null -L -w "%{http_code}" --max-time 10 "$site")
+
+    if [[ "$status" =~ ^(2|3)[0-9][0-9]$ ]]; then
+        echo "$site is REACHABLE (HTTP $status)"
+    else
+        echo "$site is NOT reachable (HTTP $status)"
+    fi
+done
